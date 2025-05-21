@@ -1,0 +1,23 @@
+---
+
+import Social from './Social.astro';
+---
+<style>
+    footer {
+  background-color: var(--footer-bg, #f5f5f5);
+  color: var(--footer-text, #333);
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #ddd;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+    
+      
+  </style>
+  
+<footer>
+  <Social platform="twitter" username="astrodotbuild" />
+  <Social platform="github" username="withastro" />
+  <Social platform="youtube" username="astrodotbuild" />
+</footer>

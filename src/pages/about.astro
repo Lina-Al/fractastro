@@ -2,31 +2,71 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import './styles/global.css';
+
+import Footer from '../components/Footer.astro';
+
+import Header from '../components/Header.astro'
+
+const pageTitle = "Обо мне";
+
+const identity = {
+  firstName: "Лина",
+  country: "Санкт-Петербург",
+  occupation: "Технический писатель",
+  hobbies: ["фотография", "наблюдение за птицами", "бейсбол"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Написание документации"];
+
+const happy = true;
+const finished = true;
+const goal = 3;
+const skillColor = "navy";
 ---
 
 <Layout>
-<!-- Ниже приведён «шаблон компонента». Это просто HTML, но с
-    небольшой магией, чтобы помочь вам создавать великолепные шаблоны. -->
-<html>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>{pageTitle}</title>
+    </head>
     <body>
-        <a href="/">Главная</a>
-        <a href="/about/">О сайте</a>
-        <h1>Мой сайт на Astro</h1>
-        <h1>Обо мне</h1>
-        <h2>... и моем новом сайте на Astro!</h2>
-      
-        <p>Я прохожу вводный учебник по Astro. Это вторая страница моего сайта, и это первая страница, которую я создал самостоятельно!</p>
-      
-        <p>Сайт будет обновляться по мере прохождения учебника, так что заходите сюда снова и следите за моим прогрессом!</p>
-      </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-    
+      <Header />
+      <h1>Мой сайт на Astro</h1>
+      <h2>... и моем новом сайте на Astro!</h2>
+      <p>Я прохожу вводный учебник по Astro. Это вторая страница моего сайта, и это первая страница, которую я создал самостоятельно!</p>
+      <p>Сайт будет обновляться по мере прохождения учебника, так что заходите сюда снова и следите за моим прогрессом!</p>
+      <p>Несколько фактов обо мне:</p>
+<ul>
+  <li>Меня зовут {identity.firstName}.</li>
+  <li>Моя страна — {identity.country}, а род занятий — {identity.occupation}.</li>
+  {identity.hobbies.length >= 2 &&
+    <li>Два моих увлечения: {identity.hobbies[0]} и {identity.hobbies[1]}</li>
   }
-</style>
+</ul>
+<p>Мои навыки:</p>
+<ul>
+  {skills.map((skill) => <li class="skill">{skill}</li>)}
+</ul>
+{happy && <p>Я рад(а) изучать Astro!</p>}
+
+{finished && <p>Я завершил(а) это руководство!</p>}
+
+{goal === 3 ? <p>Моя цель — завершить за 3 дня.</p> : <p>Моя цель — не 3 дня.</p>}
+      <Footer />
+    </body>
+  </html>
+  <style define:vars={{skillColor}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+    color: var(--skillColor);
+    font-weight: bold;
+  }
+  </style>
 
 </Layout>

@@ -1,0 +1,25 @@
+---
+import Hamburger from './Hamburger.astro';
+import Navigation from './Navigation.astro';
+import ThemeIcon from './ThemeIcon.astro';
+---
+<header>
+  <nav>
+    <Hamburger />
+    <ThemeIcon />
+    <Navigation />
+  </nav>
+  <!-- Логотип -->
+  <img src="/logo.png" alt="Логотип" class="logo" />
+</header>
+
+<style>
+  .logo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: auto;
+    z-index: 1000;
+  }
+</style>
