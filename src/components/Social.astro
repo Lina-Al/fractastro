@@ -2,11 +2,7 @@
 const { platform, username } = Astro.props;
 ---
 
-  
-<a href={`https://www.${platform}.com/${username}`} target="_blank" rel="noopener noreferrer">
-  <img src={`/icons/${platform}.svg`} alt={platform} width="20" height="20" />
-  {platform}
-</a>
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
 
 
 <style>
