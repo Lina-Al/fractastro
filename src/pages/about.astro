@@ -13,15 +13,12 @@ const pageTitle = "Обо мне";
 const identity = {
   firstName: "Лина",
   country: "Санкт-Петербург",
-  occupation: "Технический писатель",
-  hobbies: ["фотография", "наблюдение за птицами", "бейсбол"],
+  occupation: "Искатель",
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Написание документации"];
 
 const happy = true;
-const finished = true;
-const goal = 3;
 const skillColor = "navy";
 ---
 
@@ -34,27 +31,20 @@ const skillColor = "navy";
     </head>
     <body>
       <Header />
-      <h1>Мой сайт на Astro</h1>
-      <h2>... и моем новом сайте на Astro!</h2>
-      <p>Я прохожу вводный учебник по Astro. Это вторая страница моего сайта, и это первая страница, которую я создал самостоятельно!</p>
-      <p>Сайт будет обновляться по мере прохождения учебника, так что заходите сюда снова и следите за моим прогрессом!</p>
+      <h1>Информация о сайте</h1>
+      <h2>... и авторе!</h2>
+      <p>Данный сайт был реализован с помощью на фреймворке ASTRO</p>
       <p>Несколько фактов обо мне:</p>
 <ul>
   <li>Меня зовут {identity.firstName}.</li>
   <li>Моя страна — {identity.country}, а род занятий — {identity.occupation}.</li>
-  {identity.hobbies.length >= 2 &&
-    <li>Два моих увлечения: {identity.hobbies[0]} и {identity.hobbies[1]}</li>
-  }
 </ul>
 <p>Мои навыки:</p>
 <ul>
   {skills.map((skill) => <li class="skill">{skill}</li>)}
 </ul>
-{happy && <p>Я рад(а) изучать Astro!</p>}
+{happy && <p>Я была рада видеть вас на данной странице!</p>}
 
-{finished && <p>Я завершил(а) это руководство!</p>}
-
-{goal === 3 ? <p>Моя цель — завершить за 3 дня.</p> : <p>Моя цель — не 3 дня.</p>}
       <Footer />
     </body>
   </html>
@@ -64,7 +54,7 @@ const skillColor = "navy";
         font-size: 4rem;
       }
       .skill {
-    color: var(--skillColor);
+   
     font-weight: bold;
   }
   </style>

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Геометрические фракталы
+title: Стохастические фракталы
 description: "Разбираем особенности и примеры геометрических фракталов"
 image:
   url: "https://docs.astro.build/default-og-image.png"

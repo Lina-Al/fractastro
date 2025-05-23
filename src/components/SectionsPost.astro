@@ -1,0 +1,40 @@
+---
+const { title, url } = Astro.props;
+
+---
+
+<a href={url} class="section-link">
+  <li class="section-card">
+    <h2>{title}</h2>
+  </li>
+</a>
+
+<style>
+  .section-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    list-style: none;
+  }
+
+  .section-card {
+    background: linear-gradient(135deg, #c084fc, #a5b4fc);
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    list-style: none;
+  }
+
+  .section-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+  }
+</style>

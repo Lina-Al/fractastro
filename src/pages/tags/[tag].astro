@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import BlogPost from '../../components/BlogPost.astro'
+import SectionsPost from '../../components/SectionsPost.astro'
 
 export async function getStaticPaths() {
     const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
@@ -23,6 +23,6 @@ const filteredPosts = posts.filter((post: any) => post.frontmatter.tags?.include
 <BaseLayout pageTitle={tag}>
   <p>Посты с тегом {tag}</p>
   <ul>
-    {filteredPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
+    {filteredPosts.map((post: any) => <SectionsPost url={post.url} title={post.frontmatter.title}/>)}
   </ul>
 </BaseLayout>
