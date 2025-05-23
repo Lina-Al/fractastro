@@ -15,8 +15,7 @@ const pageTitle = "Разделы"
 <html>
     <body>
       <Header />
-        <h1>Разделы сайта о фрактальной графике</h1>
-        <p>Исследуйте удивительный мир фракталов: их историю, виды, свойства и многое другое!</p>
+        <h1>Разделы сайта о фрактальной графике</h1>      
         <ul>
           {allPosts.map((post: any) => <SectionsPost url={post.url} title={post.frontmatter.title} />)}
         </ul>

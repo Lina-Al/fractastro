@@ -37,6 +37,52 @@ tags: ["фракталы", "графика", "математика"]
 - Из одного квадрата выходят два меньших под углом.
 - Результат напоминает ветвящееся дерево.
 
+<canvas id="fractalCanvas" width="600" height="500" style="display:block; margin:2rem auto; background: #fefefe; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px;"></canvas>
+
+<script is:inline>
+const canvas = document.getElementById("fractalCanvas");
+const ctx = canvas.getContext("2d");
+const maxDepth = 8;
+let currentDepth = 0;
+
+function drawTree(x, y, size, angle, depth) {
+  if (depth > currentDepth) return;
+  if (depth === 0) return;
+
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(angle);
+  ctx.fillStyle = `hsl(${depth * 30}, 60%, 60%)`;
+  ctx.fillRect(0, 0, size, -size);
+
+  const newSize = size * Math.SQRT1_2;
+  const leftX = 0;
+  const leftY = -size;
+  const rightX = newSize;
+  const rightY = -size;
+
+  drawTree(leftX, leftY, newSize, -Math.PI / 4, depth - 1);
+  drawTree(rightX, rightY, newSize, Math.PI / 4, depth - 1);
+  ctx.restore();
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.save();
+  ctx.translate(canvas.width / 2 - 40, canvas.height - 20);
+  drawTree(0, 0, 80, 0, maxDepth);
+  ctx.restore();
+
+  if (currentDepth < maxDepth) {
+    currentDepth++;
+    setTimeout(() => requestAnimationFrame(animate), 400);
+  }
+}
+
+animate();
+</script>
+
+
 ### Ковёр Серпинского
 
 - Начинается с квадрата, делённого на 9 равных частей.
