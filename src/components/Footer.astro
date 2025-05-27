@@ -2,16 +2,28 @@
 
 import Social from './Social.astro';
 ---
+
+<footer>
+  <img class="gerb"src="images/gerb.png">
+  <p>Автор: Лина Ал-Обайди
+  <br>студентка РГПУ им. Герцена</p>
+  <Social platform="github" username="Lina-Al" logo="GitHub-logo.png" />
+  <Social platform="telegramm" username="lina" logo="telegra.png" />
+</footer>
+
 <style>
   footer {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+    text-decoration: none;
+    align-items: center; 
+  }
+   p{    
+    color:darkgray;
+  }
+  .gerb{
+    width:100px;
+    height: auto
   }
 </style>
-
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
-</footer>

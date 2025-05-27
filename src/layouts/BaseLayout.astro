@@ -14,8 +14,10 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
+    <hr class="wavy-line">
     <h1>{pageTitle}</h1>
     <slot />
+    <hr class="wavy-line">
     <Footer />
     <script>
       import "../scripts/menu.js";
