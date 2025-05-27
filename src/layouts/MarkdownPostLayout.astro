@@ -8,6 +8,7 @@ const { frontmatter } = Astro.props;
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
 
   <div class="tags">
+    <span class="text_teg">Данные теги показывают главные тезисы сайта:</span>
     {frontmatter.tags.map((tag: string) => (
       <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
     ))}
@@ -15,8 +16,6 @@ const { frontmatter } = Astro.props;
 
   <slot />
 </BaseLayout>
-
-
 
 <style>
   a {
@@ -35,5 +34,13 @@ const { frontmatter } = Astro.props;
     padding: .5em 1em;
     font-size: 1.15em;
     background-color: #F8FCFD;
+  }
+  img{
+    width: 400px;
+    height: auto;
+
+  }
+  .text_teg{
+    
   }
 </style>

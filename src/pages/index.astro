@@ -4,12 +4,13 @@ const pageTitle = "Фрактальная графика";
 import Greeting from '../components/Greeting.jsx';
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2 class="start">
+<h2 class="start">
   Фракталы — это больше, чем просто картинки.<br>
   Это бесконечность, заключённая в форму.<br>
   Узнайте, почему они завораживают миллионы.
 </h2>
   <section class="photo-gallery-horizontal">
+  <span class="lenta">прокрути ленту</span>
   <div class="scroll-wrapper">
     <div class="gallery-row">
       <img  src="images/frac-1.webp" alt="Fractal 1" />
@@ -21,7 +22,6 @@ import Greeting from '../components/Greeting.jsx';
     </div>
   </div>
 </section>
-
   <section class="fractal-benefits">
     <h2> Плюсы изучения фрактальной графики</h2>
     <ul>
