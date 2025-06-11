@@ -50,5 +50,18 @@ import Greeting from '../components/Greeting.jsx';
 <!--
   <Greeting client:load messages={["Привет", "Здравствуйте", "Приветствую", "Эй, привет"]} />
    -->
+
+   
 </BaseLayout>
 
+<script>
+  const wrapper = document.querySelector('.scroll-wrapper');
+  if (wrapper) {
+    wrapper.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        wrapper.scrollLeft += e.deltaY * 0.3; // замедление скролла
+      }
+    }, { passive: false });
+  }
+</script>

@@ -13,7 +13,6 @@ const pageTitle = "Разделы"
 
 <BaseLayout>
 <html>
-  
         <h1>Разделы сайта о фрактальной графике</h1>      
         <ul>
           {allPosts.map((post: any) => <SectionsPost url={post.url} title={post.frontmatter.title} />)}
