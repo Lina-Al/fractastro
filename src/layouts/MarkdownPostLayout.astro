@@ -3,44 +3,87 @@ import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout pageTitle={frontmatter.title}>
-  <p><em>{frontmatter.description}</em></p>
+<BaseLayout>
+  <div class="post-header">
+  <p class="center"><em>{frontmatter.description}</em></p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+</div>
 
   <div class="tags">
-    <span class="text_teg">Данные теги показывают главные тезисы сайта:</span>
-    {frontmatter.tags.map((tag: string) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-    ))}
+    <span class="tags-title"> Теги:</span>
+    <div class="tag-list">
+      {frontmatter.tags.map((tag: string) => (
+        <a href={`/tags/${tag}`} class="tag">{tag}</a>
+      ))}
+    </div>
   </div>
 
-  <slot />
+
+  <div class="post-content">
+     <slot />
+  </div>
+
 </BaseLayout>
 
 <style>
+  
+  
+  .post-header{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+ 
   a {
-    color: #00539F;
-  }
+  color: #6A0DAD; 
+}
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.tags {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f7f0ff;
+  border-left: 4px solid #9B30FF; 
+  border-radius: 0.5rem;
+}
 
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
-  }
+.tags-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #6A0DAD;
+}
+
+.tag {
+  padding: 0.4em 1em;
+  background-color: #e9ddff; 
+  color: #6A0DAD;
+  text-decoration: none;
+  font-size: 0.95em;
+  border-radius: 2em;
+  border: 1px solid #c9a8ff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #6A0DAD;
+  color: white;
+}
+
   img{
-    width: 400px;
+    max-width: 50%;
     height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   }
-  .text_teg{
-    
+
+  @media (max-width: 768px) {
+    .post-image {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.9em;
+    }
   }
 </style>
