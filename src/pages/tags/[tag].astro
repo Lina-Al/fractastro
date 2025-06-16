@@ -21,7 +21,6 @@ const { posts } = Astro.props;
 const filteredPosts = posts.filter((post: any) => post.frontmatter.tags?.includes(tag));
 ---
 <BaseLayout pageTitle={tag}>
-  <p>Посты с тегом {tag}</p>
   <ul>
     {filteredPosts.map((post: any) => <SectionsPost url={post.url} title={post.frontmatter.title}/>)}
   </ul>

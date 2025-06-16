@@ -45,7 +45,7 @@ th, td, tr:nth-child(even){
   margin-right: auto;
   font-family: "WDXL Lubrifont TC";
   padding: 0.4rem 1rem;
-  background-color: #2646b9a6;  
+  background-color: #919fd5a6;  
   border-radius: 800px;              
   border: 1px solid #ccc; 
   margin-bottom: 1rem;
@@ -191,10 +191,10 @@ html.dark .fractal-benefits li strong {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #b0a5ce;
+  background-color: #e9ddff;
   display: none;
   margin: 0;
-  color:#331b82;
+  color:#6A0DAD;
 }
 
 html.dark .nav-links{
@@ -218,7 +218,7 @@ html.dark .nav-links a:hover,
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #b0a5ce;
+  background-color: #e9ddff;
 }
 
 .expanded {

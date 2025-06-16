@@ -32,9 +32,12 @@ const { frontmatter } = Astro.props;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
-  background-color: var(--card-bg); /* подстраивается под тему */
+  background-color: #e9ddff; 
   color: inherit;
   transition: background-color 0.3s ease;
+}
+html.dark .post-content {
+ background-color: #756c84; 
 }
 
 a:hover {
