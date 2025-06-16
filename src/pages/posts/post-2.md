@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Что такое фрактал?
 description: "Погружаемся в мир фракталов — удивительных математических фигур!"
 image:
-  url: "../images/kapusta.jpg"
+  url: "/images/kapusta.jpg"
   alt: "Миниатюра с дугами Astro."
 tags: ["математика", "фракталы", "геометрия", "обучение", "классификация", "треугольник Серпинского", "снежинка Коха"]
 ---

@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Геометрические фракталы
 description: "Разбираем особенности и примеры геометрических фракталов"
 image:
-  url: "../images/frac-geo.jpg"
+  url: "/images/frac-geo.jpg"
   alt: "Слово «astro» на фоне иллюстрации планет и звезд."
 tags: ["фракталы", "графика", "математика", "снежинка Коха"]
 ---

@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Что такое фрактальная графика?
 description: "Разбираемся, что такое фрактальная графика и как она используется в науке, искусстве и технологиях."
 image:
-  url: "../images/frac-grafic.jpg"
+  url: "/images/frac-grafic.jpg"
   alt: "Миниатюра с дугами Astro."
 tags: ["графика", "фракталы", "искусство", "технологии", "математика"]
 ---

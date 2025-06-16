@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Стохастические фракталы
 description: "Разбираем особенности и примеры стохастических фракталов"
 image:
-  url: "../images/frac-tree.jpg"
+  url: "/images/frac-tree.jpg"
   alt: "Слово «astro» на фоне иллюстрации планет и звезд."
 tags: ["фракталы", "графика", "математика","стохастические фракталы"]
 ---

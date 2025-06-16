@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Алгебраические фракталы
 description: "Разбираем особенности и примеры алгебраических фракталов"
 image:
-  url: "../images/frac-alg.jpg"
+  url: "/images/frac-alg.jpg"
   alt: "Слово «astro» на фоне иллюстрации планет и звезд."
 tags: ["фракталы", "графика", "математика"]
 ---

@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Сайты для построения фракталов
 description: "Рассматриваем  сайты для того, чтобы выбрать лучший"
 image:
-  url: "../images/general.jpg"
+  url: "/images/general.jpg"
   alt: "Красивый фрактал"
 tags: ["фракталы", "графика", "сайты", "создание"]
 ---
